@@ -1,2 +1,4 @@
-# secret config
+# files
 .env
+go.sum
+application

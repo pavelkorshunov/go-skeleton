@@ -1,7 +1,15 @@
 package app
 
-import "fmt"
+import (
+	"log"
+
+	"github.com/spf13/viper"
+)
 
 func init() {
-	fmt.Println("init")
+	viper.SetConfigFile(".env")
+
+	if err := viper.ReadInConfig(); err != nil {
+		log.Fatal("Error loading .env file")
+	}
 }

@@ -2,3 +2,6 @@
 .env
 go.sum
 application
+
+# folders
+.idea

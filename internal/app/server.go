@@ -5,8 +5,10 @@ import (
 	"github.com/spf13/viper"
 )
 
-func startWebServer() {
-	//gin.SetMode(gin.ReleaseMode)
+func startWebServer(mode string) {
+	if mode == "production" {
+		gin.SetMode(gin.ReleaseMode)
+	}
 
 	router := gin.Default()
 	registerControllers(router)

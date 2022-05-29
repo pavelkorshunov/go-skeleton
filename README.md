@@ -2,7 +2,13 @@
 
 Golang project example
 
-## Installation
+## Install dependencies from go.mod
+
+```bash
+$ go mod tidy
+```
+
+## Build application
 
 ```bash
 $ make install

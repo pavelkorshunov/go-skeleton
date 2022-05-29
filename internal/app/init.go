@@ -1,8 +1,9 @@
 package app
 
 import (
-	"github.com/spf13/viper"
 	"log"
+
+	"github.com/spf13/viper"
 )
 
 func init() {

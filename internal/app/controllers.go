@@ -8,4 +8,5 @@ import (
 func registerControllers(router *gin.Engine) {
 	group := router.Group("/v1")
 	group.GET("/version", v1.VersionController)
+	group.GET("/user", v1.UserController)
 }

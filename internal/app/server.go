@@ -21,7 +21,6 @@ func startWebServer(mode string) {
 
 	err := router.Run(viper.GetString("APP_URL"))
 	if err != nil {
-		log.Fatal("Failed run web server")
-		return
+		panic("Failed run web server")
 	}
 }

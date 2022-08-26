@@ -1,15 +1,9 @@
 package app
 
 import (
-	"log"
-
-	"github.com/spf13/viper"
+	"github.com/pavelkorshunov/go-skeleton/internal/modules"
 )
 
 func init() {
-	viper.SetConfigFile(".env")
-
-	if err := viper.ReadInConfig(); err != nil {
-		log.Fatal("Error loading .env file")
-	}
+	modules.Config()
 }

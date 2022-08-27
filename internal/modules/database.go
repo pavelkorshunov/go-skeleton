@@ -1,7 +1,6 @@
 package modules
 
 import (
-	"context"
 	"log"
 
 	"github.com/pavelkorshunov/go-skeleton/pkg/mongodb"
@@ -11,13 +10,17 @@ import (
 
 var connection *mongo.Database
 
-func SetConnection(ctx context.Context, db string) {
-	client, err := mongodb.NewClient(ctx, viper.GetString("MONGODB_URI"))
+func SetConnection() {
+	uri := viper.GetString("DB_URI")
+	username := viper.GetString("DB_USERNAME")
+	password := viper.GetString("DB_PASSWORD")
+
+	client, err := mongodb.NewClient(uri, username, password)
 	if err != nil {
 		log.Fatal("Failed to connect mongodb")
 	}
 
-	connection = client.Database(db)
+	connection = client.Database(viper.GetString("DB_DATABASE"))
 }
 
 func GetConnection() *mongo.Database {

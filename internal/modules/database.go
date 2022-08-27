@@ -10,7 +10,7 @@ import (
 
 var connection *mongo.Database
 
-func SetConnection() {
+func ConnectionDatabase() {
 	uri := viper.GetString("DB_URI")
 	username := viper.GetString("DB_USERNAME")
 	password := viper.GetString("DB_PASSWORD")

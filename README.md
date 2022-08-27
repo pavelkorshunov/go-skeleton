@@ -13,3 +13,9 @@ $ go mod tidy
 ```bash
 $ make install
 ```
+
+## Run dev mode application
+
+```bash
+$ make run
+```

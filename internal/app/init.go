@@ -6,4 +6,5 @@ import (
 
 func init() {
 	modules.Config()
+	modules.ConnectionDatabase()
 }

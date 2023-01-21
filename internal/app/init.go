@@ -7,4 +7,5 @@ import (
 func init() {
 	modules.Config()
 	modules.ConnectionDatabase()
+	modules.InitRepositories()
 }
